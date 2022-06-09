@@ -33,3 +33,7 @@ body {
   padding: 3px;
   border-radius: 3px;
 }
+
+#msg {
+  color: #ff0000;
+}
