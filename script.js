@@ -70,3 +70,11 @@ let createTasks = () => {
 
   resetForm();
 };
+
+// Reset form
+
+let resetForm = () => {
+  textInput.value = "";
+  dateInput.value = "";
+  textarea.value = "";
+};
