@@ -100,6 +100,8 @@ let resetForm = () => {
   textarea.value = "";
 };
 
+// Get data from local storage using IIFE
+
 (() => {
   data = JSON.parse(localStorage.getItem("data")) || [];
   console.log(data);
