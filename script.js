@@ -26,6 +26,7 @@ let formValidation = () => {
       add.setAttribute("data-bs-dismiss", "");
     })();
   }
+  slist(document.getElementById("tasks"));
 };
 
 let data = [{}];
