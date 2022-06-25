@@ -95,7 +95,7 @@ let resetForm = () => {
 // Drag and drop
 
 function slist(target) {
-  target.classList.add("slist");
+  // target.classList.add("slist");
   let items = target.getElementsByTagName("div"),
     current = null;
 
