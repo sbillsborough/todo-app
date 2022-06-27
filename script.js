@@ -97,6 +97,7 @@ let resetForm = () => {
 
 function slist(target) {
   // target.classList.add("slist");
+
   let items = target.getElementsByTagName("div"),
     current = null;
 
