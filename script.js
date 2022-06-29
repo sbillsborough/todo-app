@@ -68,8 +68,8 @@ let deleteTask = (e) => {
   e.parentElement.parentElement.remove();
   data.splice(e.parentElement.parentElement.id, 1);
   localStorage.setItem("data", JSON.stringify(data));
-  console.log(data);
   slist(target);
+  console.log(data);
 };
 
 let editTask = (e) => {
@@ -97,15 +97,13 @@ let resetForm = () => {
 // Drag and drop
 
 function slist(target) {
-  // target.classList.add("slist");
-
   let items = target.getElementsByTagName("div"),
     current = null;
 
   for (let i of items) {
     i.draggable = true;
 
-    // (B2) DRAG START - YELLOW HIGHLIGHT DROPZONES
+    // DRAG START - LIGHT GREEN HIGHLIGHT DROPZONES
     i.ondragstart = (ev) => {
       current = i;
       for (let it of items) {
@@ -115,19 +113,19 @@ function slist(target) {
       }
     };
 
-    // (B3) DRAG ENTER - RED HIGHLIGHT DROPZONE
+    // DRAG ENTER - RED HIGHLIGHT DROPZONE
     i.ondragenter = (ev) => {
       if (i != current) {
         i.classList.add("active");
       }
     };
 
-    // (B4) DRAG LEAVE - REMOVE RED HIGHLIGHT
+    // DRAG LEAVE - REMOVE RED HIGHLIGHT
     i.ondragleave = () => {
       i.classList.remove("active");
     };
 
-    // (B5) DRAG END - REMOVE ALL HIGHLIGHTS
+    // DRAG END - REMOVE ALL HIGHLIGHTS
     i.ondragend = () => {
       for (let it of items) {
         it.classList.remove("hint");
@@ -135,12 +133,12 @@ function slist(target) {
       }
     };
 
-    // (B6) DRAG OVER - PREVENT THE DEFAULT "DROP", SO WE CAN DO OUR OWN
+    // DRAG OVER - PREVENT THE DEFAULT "DROP", SO WE CAN DO OUR OWN
     i.ondragover = (evt) => {
       evt.preventDefault();
     };
 
-    // (B7) ON DROP - DO SOMETHING
+    // ON DROP - DO SOMETHING
     i.ondrop = (evt) => {
       evt.preventDefault();
       if (i != current) {

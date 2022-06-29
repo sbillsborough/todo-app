@@ -62,3 +62,11 @@ body {
 #tasks div .options i {
   cursor: pointer;
 }
+
+.active {
+  color: #ff0000;
+}
+
+.hint {
+  color: #7da169;
+}
