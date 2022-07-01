@@ -55,10 +55,9 @@ let createTasks = () => {
   
           <span class="options">
             <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
-            <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
-            <i onClick ="colorToggle()" 
-            class="fas fa-solid fa-clock"></i>
+            <i onClick= "deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
           </span>
+          
         </div>
     `);
   });
@@ -106,7 +105,7 @@ function slist(target) {
     i.draggable = true;
 
     // DRAG START - LIGHT GREEN HIGHLIGHT DROPZONES
-    i.ondragstart = (ev) => {
+    i.ondragstart = (e) => {
       current = i;
       for (let it of items) {
         if (it != current) {
@@ -116,14 +115,14 @@ function slist(target) {
     };
 
     // DRAG ENTER - RED HIGHLIGHT DROPZONE
-    i.ondragenter = (ev) => {
+    i.ondragenter = (e) => {
       if (i != current) {
         i.classList.add("active");
       }
     };
 
     // DRAG LEAVE - REMOVE RED HIGHLIGHT
-    i.ondragleave = () => {
+    i.ondragleave = (e) => {
       i.classList.remove("active");
     };
 
@@ -136,13 +135,13 @@ function slist(target) {
     };
 
     // DRAG OVER - PREVENT THE DEFAULT "DROP", SO WE CAN DO OUR OWN
-    i.ondragover = (evt) => {
-      evt.preventDefault();
+    i.ondragover = (e) => {
+      e.preventDefault();
     };
 
     // ON DROP - DO SOMETHING
-    i.ondrop = (evt) => {
-      evt.preventDefault();
+    i.ondrop = (e) => {
+      e.preventDefault();
       if (i != current) {
         let currentpos = 0,
           droppedpos = 0;
