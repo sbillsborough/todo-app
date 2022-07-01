@@ -11,6 +11,23 @@ body {
   height: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b9f0ff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #72e0ff;
+}
+
 h4 {
   text-align: center;
 }
@@ -50,13 +67,18 @@ h4 {
 }
 
 #tasks div {
-  border-bottom: 0.02px solid #cac9c9;
-  border-right: 0.02px solid #cac9c9;
+  border-bottom: 0.02px solid #a5a5a5;
+  border-right: 0.02px solid #a5a5a5;
   background-color: #b9f0ff;
   border-radius: 6px;
   padding: 5px;
   display: grid;
   gap: 4px;
+}
+
+#tasks div:hover {
+  background-color: #72e0ff;
+  cursor: move;
 }
 
 #tasks div .options {
