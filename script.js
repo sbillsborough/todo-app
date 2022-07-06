@@ -69,7 +69,7 @@ let deleteTask = (e) => {
   e.parentElement.parentElement.remove();
   data.splice(e.parentElement.parentElement.id, 1);
   localStorage.setItem("data", JSON.stringify(data));
-  slist(target);
+  slist(e);
   console.log(data);
 };
 
@@ -94,6 +94,12 @@ let resetForm = () => {
   console.log(data);
   createTasks();
 })();
+
+let deleteAllTasks = () => {
+  document.getElementById("tasks").innerHTML = "";
+  localStorage.removeItem("data", JSON.stringify(data));
+  console.log(data);
+};
 
 // Drag and drop
 

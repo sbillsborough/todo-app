@@ -57,7 +57,7 @@ h4 {
 }
 
 #deleteAll {
-  font-size: x-large;
+  font-size: 25px;
   margin-top: 20px;
   padding: 20px;
   display: grid;
@@ -66,6 +66,8 @@ h4 {
 
 #deleteAll:hover {
   color: #f00;
+  font-size: 30px;
+  transition: ease-in 0.1s;
 }
 
 #msg {
