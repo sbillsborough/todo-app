@@ -56,8 +56,20 @@ h4 {
   border-radius: 50px;
 }
 
+#deleteAll {
+  font-size: x-large;
+  margin-top: 20px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+
+#deleteAll:hover {
+  color: #f00;
+}
+
 #msg {
-  color: #ff0000;
+  color: #f00;
 }
 
 #tasks {
