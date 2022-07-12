@@ -5,10 +5,20 @@ let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
+let del = document.getElementById("del");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   formValidation();
+});
+
+del.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (confirm("Warning: This will delete all TODO items. Are you sure?")) {
+    deleteAllTasks();
+  } else {
+    console.log("Items were not deleted.");
+  }
 });
 
 let formValidation = () => {
@@ -95,10 +105,16 @@ let resetForm = () => {
   createTasks();
 })();
 
+// let deleteAllTasks = () => {
+//   document.getElementById("tasks").innerHTML = "";
+//   localStorage.removeItem("data", JSON.stringify(data));
+//   console.log(data);
+// };
+
 let deleteAllTasks = () => {
-  document.getElementById("tasks").innerHTML = "";
-  localStorage.removeItem("data", JSON.stringify(data));
-  console.log(data);
+  while (data.length) {
+    let prop = data.shift();
+  }
 };
 
 // Drag and drop

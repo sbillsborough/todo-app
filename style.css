@@ -50,6 +50,12 @@ h4 {
   cursor: pointer;
 }
 
+#addNew:hover {
+  background-color: #72e0ff;
+  border-bottom: 0.02px solid #a5a5a5;
+  border-right: 0.02px solid #a5a5a5;
+}
+
 .fa-plus {
   background-color: #79e2ff;
   padding: 3px;
