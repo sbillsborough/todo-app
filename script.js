@@ -111,10 +111,12 @@ let resetForm = () => {
 //   console.log(data);
 // };
 
-let deleteAllTasks = () => {
-  while (data.length) {
-    let prop = data.shift();
-  }
+let deleteAllTasks = (e) => {
+  document.getElementById("tasks").innerHTML = "";
+  let data = [];
+  localStorage.removeItem("data");
+  console.log(data);
+  location.reload();
 };
 
 // Drag and drop
