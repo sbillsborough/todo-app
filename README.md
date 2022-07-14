@@ -15,7 +15,7 @@
 
 ## General info
 
-Project to practise CRUD operations in JavaScript. Includes add/edit/delete tasks, 'drag and drop' plus 'delete all' features.
+Project to practise CRUD operations in JavaScript. Includes add/edit/delete tasks, 'drag and drop', 'delete all' and scroll bar features.
 
 ## Screenshots
 
@@ -37,6 +37,7 @@ Open the index.html in any modern browser.
 - Add/delete/edit tasks
 - Delete all tasks including a pop up box to confirm
 - Drag and drop tasks to prefered order
+- Scroll bar
 
 ## Status
 
@@ -44,7 +45,7 @@ Project is: _finished_
 
 ## Inspiration
 
-Based on https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-building-todo-app/ with drag and drop, delete all tasks and improved styling added by myself.
+Based on https://www.freecodecamp.org/news/learn-crud-operations-in-javascript-by-building-todo-app/ with drag and drop, delete all tasks, scroll bar and improved styling added by myself.
 
 ## Contact
 
