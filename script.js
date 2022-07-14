@@ -5,18 +5,11 @@ let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
 let add = document.getElementById("add");
-// let del = document.getElementById("del");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   formValidation();
 });
-
-// del.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   let confirmed = confirm("Are you sure you want to delete ALL tasks?");
-//   return confirmed;
-// });
 
 let formValidation = () => {
   if (textInput.value === "") {
